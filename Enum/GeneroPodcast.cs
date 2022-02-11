@@ -1,7 +1,11 @@
 namespace DIO.PlayerMusica.Enum
 {
-    public class GeneroPodcast
+    public enum GeneroPodcast
     {
-        
+        Noticias = 1,
+        Educacao = 2,
+        Tecnologia = 3,
+        Fofoca = 4
     }
+
 }
