@@ -1,0 +1,14 @@
+C:\Developer\DIO.PlayerMusica\obj\Debug\netcoreapp3.1\DIO.PlayerMusica.csproj.AssemblyReference.cache
+C:\Developer\DIO.PlayerMusica\obj\Debug\netcoreapp3.1\DIO.PlayerMusica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Developer\DIO.PlayerMusica\obj\Debug\netcoreapp3.1\DIO.PlayerMusica.AssemblyInfoInputs.cache
+C:\Developer\DIO.PlayerMusica\obj\Debug\netcoreapp3.1\DIO.PlayerMusica.AssemblyInfo.cs
+C:\Developer\DIO.PlayerMusica\obj\Debug\netcoreapp3.1\DIO.PlayerMusica.csproj.CoreCompileInputs.cache
+C:\Developer\DIO.PlayerMusica\bin\Debug\netcoreapp3.1\DIO.PlayerMusica.exe
+C:\Developer\DIO.PlayerMusica\bin\Debug\netcoreapp3.1\DIO.PlayerMusica.deps.json
+C:\Developer\DIO.PlayerMusica\bin\Debug\netcoreapp3.1\DIO.PlayerMusica.runtimeconfig.json
+C:\Developer\DIO.PlayerMusica\bin\Debug\netcoreapp3.1\DIO.PlayerMusica.runtimeconfig.dev.json
+C:\Developer\DIO.PlayerMusica\bin\Debug\netcoreapp3.1\DIO.PlayerMusica.dll
+C:\Developer\DIO.PlayerMusica\bin\Debug\netcoreapp3.1\DIO.PlayerMusica.pdb
+C:\Developer\DIO.PlayerMusica\obj\Debug\netcoreapp3.1\DIO.PlayerMusica.dll
+C:\Developer\DIO.PlayerMusica\obj\Debug\netcoreapp3.1\DIO.PlayerMusica.pdb
+C:\Developer\DIO.PlayerMusica\obj\Debug\netcoreapp3.1\DIO.PlayerMusica.genruntimeconfig.cache
