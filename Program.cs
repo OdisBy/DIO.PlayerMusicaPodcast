@@ -20,13 +20,13 @@ namespace DIO.PlayerMusica
 						InserirMusica();
 						break;
 					case "3":
-						//AtualizarSerie();
+						AtualizarSerie();
 						break;
 					case "4":
-						//ExcluirSerie();
+						ExcluirSerie();
 						break;
 					case "5":
-						//VisualizarSerie();
+						VisualizarSerie();
 						break;
 					case "C":
 						Console.Clear();
@@ -50,7 +50,7 @@ namespace DIO.PlayerMusica
         private static string ObterOpcaoUsuario()
 		{
 			Console.WriteLine();
-			Console.WriteLine("DIO Séries a seu dispor!!!");
+			Console.WriteLine("DIO Player de Música a seu dispor!!!");
 			Console.WriteLine("Informe a opção desejada:");
 
 			Console.WriteLine("1- Listar músicas");
@@ -84,48 +84,39 @@ namespace DIO.PlayerMusica
 
 			foreach (var musica in lista)
 			{
-                //var excluido = musica.retornaExcluido();
+                var excluido = musica.retornaExcluido();
                 
-				Console.WriteLine("#ID {0}: - {1}", musica.retornaId(), musica.retornaTitulo());//, (excluido ? "*Excluído*" : ""));
+				Console.WriteLine("#ID {0}: - {1} {2}", musica.retornaId(), musica.retornaTitulo(), (excluido ? "*Excluído*" : ""));
+				//System.Console.WriteLine("#ID {0} - {1}", musica.retornaId(), musica.ToString());
 			}
-
-            
 		}
 
         private static void InserirMusica()
 		{
-			Console.WriteLine("Inserir nova música");
+			musicaRepositorio.PopulaDados(1);
+		}
 
-			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
-			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getname?view=netcore-3.1
-			foreach (int i in GeneroMusica.GetValues(typeof(GeneroMusica)))
-			{
-				Console.WriteLine("{0}-{1}", i, GeneroMusica.GetName(typeof(GeneroMusica), i));
-			}
-			Console.Write("Digite o gênero entre as opções acima: ");
-			int entradaGenero = int.Parse(Console.ReadLine());
+		private static void AtualizarSerie()
+		{
+			musicaRepositorio.PopulaDados(2);
+		}
 
-			Console.Write("Digite o Título da Série: ");
-			string entradaTitulo = Console.ReadLine();
+		private static void ExcluirSerie()
+		{
+			Console.Write("Digite o id da música: ");
+			int indiceMusica = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite o Ano de Lançamento: ");
-			int entradaAno = int.Parse(Console.ReadLine());
+			musicaRepositorio.Excluir(indiceMusica);
+		}
 
-			Console.Write("Digite o Cantor da música: ");
-			string entradaCantor = Console.ReadLine();
+		private static void VisualizarSerie()
+		{
+			Console.Write("Digite o id da música: ");
+			int indiceMusica = int.Parse(Console.ReadLine());
 
-            System.Console.Write("Digite a duração da música: ");
-            DateTime entradaDuracao = Convert.ToDateTime(Console.ReadLine());
+			var musica = musicaRepositorio.RetornaPorId(indiceMusica);
 
-
-			Musica novaMusica = new Musica(id: musicaRepositorio.ProximoId(),
-										genero: (GeneroMusica)entradaGenero,
-										Titulo: entradaTitulo,
-										ano: entradaAno,
-										cantor: entradaCantor,
-                                        duracao: entradaDuracao);
-
-			musicaRepositorio.Insere(novaMusica);
+			Console.WriteLine(musica);
 		}
 
         

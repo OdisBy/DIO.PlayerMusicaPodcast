@@ -7,8 +7,9 @@ namespace DIO.PlayerMusica.Interfaces
          List<T> Lista();
          T RetornaPorId(int id);
          void Insere(T entidade);
-         void ExcluiK(int id);
+         void Excluir(int id);
          void Atualiza(int id, T entidade);
          int ProximoId();
+         void PopulaDados(int AdicionaAtualiza);
     }
 }

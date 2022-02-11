@@ -6,7 +6,7 @@ namespace DIO.PlayerMusica
     {
         //Atributos
         private string Titulo { get; set;}
-        private DateTime Duracao {get; set;}
+        private string Duracao {get; set;}
         private string Cantor {get; set;}
         private string Feat {get; set;}
         private int Ano { get; set;}
@@ -14,7 +14,7 @@ namespace DIO.PlayerMusica
         private bool Excluido {get; set;}
 
 
-        public Musica(int id, GeneroMusica genero, string Titulo, string cantor, DateTime duracao, int ano)
+        public Musica(int id, GeneroMusica genero, string Titulo, string cantor, string duracao, int ano)
         {
             this.Id = id;
             this.Genero = genero;
@@ -36,6 +36,7 @@ namespace DIO.PlayerMusica
                 retorno += "Feat: " + this.Feat + Environment.NewLine;
 
             retorno += "Ano: " + this.Ano + Environment.NewLine;
+            retorno += "Excluido: " + this.Excluido;
             return retorno;
         }
 
@@ -50,6 +51,10 @@ namespace DIO.PlayerMusica
         public void Excluir()
         {
             this.Excluido = true;
+        }
+        public bool retornaExcluido()
+        {
+            return this.Excluido;
         }
     }
 }
