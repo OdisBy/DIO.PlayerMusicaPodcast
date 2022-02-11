@@ -53,11 +53,11 @@ namespace DIO.PlayerMusica
 			Console.WriteLine("DIO Séries a seu dispor!!!");
 			Console.WriteLine("Informe a opção desejada:");
 
-			Console.WriteLine("1- Listar séries");
-			Console.WriteLine("2- Inserir nova série");
-			Console.WriteLine("3- Atualizar série");
-			Console.WriteLine("4- Excluir série");
-			Console.WriteLine("5- Visualizar série");
+			Console.WriteLine("1- Listar músicas");
+			Console.WriteLine("2- Inserir nova música");
+			Console.WriteLine("3- Atualizar música");
+			Console.WriteLine("4- Excluir música");
+			Console.WriteLine("5- Visualizar música");
 			Console.WriteLine("C- Limpar Tela");
 			Console.WriteLine("X- Sair");
 			Console.WriteLine();
@@ -86,7 +86,7 @@ namespace DIO.PlayerMusica
 			{
                 //var excluido = musica.retornaExcluido();
                 
-				Console.WriteLine("#ID {0}: - {1} {2}", musica.retornaId(), musica.retornaTitulo());//, (excluido ? "*Excluído*" : ""));
+				Console.WriteLine("#ID {0}: - {1}", musica.retornaId(), musica.retornaTitulo());//, (excluido ? "*Excluído*" : ""));
 			}
 
             
@@ -108,7 +108,7 @@ namespace DIO.PlayerMusica
 			Console.Write("Digite o Título da Série: ");
 			string entradaTitulo = Console.ReadLine();
 
-			Console.Write("Digite o Ano de Início da Série: ");
+			Console.Write("Digite o Ano de Lançamento: ");
 			int entradaAno = int.Parse(Console.ReadLine());
 
 			Console.Write("Digite o Cantor da música: ");
