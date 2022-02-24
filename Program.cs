@@ -228,7 +228,7 @@ namespace DIO.PlayerMusica
 
 			if (lista.Count == 0)
 			{
-				Console.WriteLine("Nenhuma música cadastrada.");
+				Console.WriteLine("Nenhum podcast cadastrada.");
 				return;
 			}
 
